@@ -1,0 +1,72 @@
+
+$colorWhite:rgba(255, 255, 255, 1);
+$colorWhiteTwo:rgba(255, 255, 255, 0.8);
+$colorYellow:rgba(255, 199, 0, 1);
+$colorBlue:rgba(4, 153, 221, 1);
+$colorBlack:rgba(40, 40, 40, 1);
+$colorBlueGrad:linear-gradient(rgba(4, 153, 221, 1),rgba(23, 193, 188, 1));
+
+
+
+
+
+%page {
+    width: 100%;
+    max-width: 1520px;
+    margin: 0 auto;
+}
+
+%container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 25px ;
+}
+
+%section-content {
+    width: 100%;
+    max-width: 1340px;
+    padding: 0 10px ;
+}
+
+%btn-arrow {
+    background: $colorBlueGrad;
+    padding: 1.2rem 4.7rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: $colorWhite;
+    border-radius: 60px;
+    font-size: 14px;
+    font-weight: 700;
+
+    span {
+        color: $colorWhite;
+        position: relative;
+    }
+
+    span::after{
+        content: '';
+        position: absolute;
+        top: 1px;
+        right: -20px;
+        display: inline-block;
+        width: 15px;
+        height: 8px;
+        background: url('../icons/Arrow-one.svg')  no-repeat;
+        margin-left: 5px; 
+    }
+}
+%btn-blue {
+    background: $colorBlueGrad;
+    padding:1rem 3.5rem 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: $colorWhite;
+    border-radius: 60px;
+    font-size: 14px;
+    font-weight: 700;
+    //line-height: 50px;
+    cursor: pointer;
+}

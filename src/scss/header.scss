@@ -1,0 +1,1851 @@
+@import './_variebls';
+@import './_zeroing';
+
+
+.wrapper{
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+
+}
+
+.header {
+    background: url('../img/Rectangle fon.jpg') center / cover no-repeat;
+    overflow: hidden;
+
+    &__top {
+        @extend %container;
+        margin-bottom: 7rem;
+    }
+
+    &__body {
+        @extend %container;
+        display: flex;
+        justify-content: space-between;  
+        margin-bottom: 248px;
+    }
+
+    &__footer {
+        @extend %page;
+        display: flex;
+        justify-content: flex-end;
+        gap: 1.2rem;
+        margin-top: -114px;
+        margin-bottom: rem;
+    }
+}
+
+/*=HEADER NAV==============================*/
+.nav {
+    min-height:109px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .nav-logo {
+        display: inline-block;
+        position: relative;
+        top: 0;
+
+        animation-name: ball;
+        animation-duration:7s ;
+        animation-timing-function:cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes ball  {
+        0% {  
+         top: 0;
+        }
+
+        50% {
+            top: 40px;
+        }
+
+        100% {
+            top: 0;
+        }  
+    }
+
+    .nav-lists {
+        display: flex;
+        gap: 1.2rem;
+    }
+ 
+    .nav-link {
+        font-size: 14px;
+        font-weight: 500;
+        color: $colorWhite;
+        transition: all .3s linear;
+
+        &:hover {
+            color: $colorYellow;
+        }
+    }
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burg {
+    display: block;
+    width: 40px;
+    height: 5px;
+    margin: 5px auto;
+    border-radius: 10px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+  
+    background-color: $colorWhite;
+    
+}
+
+/*=HEADER BANNER===============================*/
+
+.text {
+    line-height: 1;
+ 
+    &__subtitle {
+        font-size: 72px;
+        font-weight: 700;
+        color: $colorWhite;
+        position: relative;
+
+        span {
+            position: absolute;
+            bottom: -1.4rem;
+            right: 2.5rem;
+            color: $colorYellow;
+            font-size: 54px;
+        }
+    }
+
+    &__title {
+        font-size: 96px;
+        font-weight: 900;
+        -webkit-text-stroke: 2px $colorWhite;
+        color: transparent;
+        margin-bottom: 57px;
+    }
+
+    &__butoon {
+        @extend %btn-arrow;
+        
+    }
+}
+.web {
+    display:flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+}
+.web-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 5.4rem;
+}
+
+/*=HEADER FOOTER==========================================================================*/
+
+.video {
+    width: 360px;
+    border-radius: 10px;
+    overflow: hidden;
+    background:  url('../img/Rectangle video.jpg') center / cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.image {
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+}
+
+/*=PAGE==========================================================================*/
+
+.page {
+    padding: 10rem 0 0 0;
+}
+
+/*=EXCURSION==========================================================================*/
+
+.excursions{
+    @extend %page;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5rem;
+
+    &__content {
+        @extend %section-content;
+        min-height: 5rem;
+    }
+}
+
+.excursions-box {
+    max-width: 1120px;
+    margin-bottom: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title{
+        color: $colorBlue;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    &__link{
+        color: $colorBlack;
+        font-size: 12px;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+}
+
+.swiper {
+    max-width: 100%;    
+}
+
+.excursions-row {
+    position: relative;
+    display: flex;
+    gap: 1.2rem;
+    overflow: hidden;
+    margin: 3rem 0;
+}
+.swiper-scrollbar {
+    max-height: 2px;
+}
+
+.excursion {
+    min-height: 497px;
+    width: 30%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+        margin-right:-190px;
+    }
+} 
+
+.excursion-one{
+    background: url('../img/Rectangle\ slidone.jpg') center / cover no-repeat;
+    padding-top: 211px;
+    padding-left: 16px;
+    padding-right: 16px;
+  
+
+    &__subtitle {
+        font-size: 14px;
+        font-weight: 500;
+        color: $colorWhiteTwo;  
+        margin-bottom: 2px;
+    }
+
+    &__title {
+        font-size: 15px;
+        font-weight: 700;
+        color: $colorYellow;
+        margin-bottom: 10px;
+    }
+    &__time {
+        font-size: 12px;
+        font-weight: 500;
+        color: $colorWhiteTwo; 
+        display: flex;
+        align-items: center;
+        column-gap: 31px;
+        margin-bottom: 20px;
+
+        .times {
+            display: flex;
+            align-items: center;
+        }
+        .prices {
+            display: flex;
+            align-items: center;
+        }
+
+        .times-numer {
+            color: $colorWhite;
+            font-size: 12px;
+            margin-left:2px;
+        }
+        .prices-numer {
+            color: $colorWhite;
+            font-size: 12px;
+            line-height: 12px;
+            margin-left:2px;
+        }
+    }
+    &__discriptions {
+        font-size: 13px;
+        line-height: 14.63px;
+        font-weight: 500;
+        color: $colorWhiteTwo; 
+        flex: 1 1 auto;
+        padding-right: 1rem;
+        margin-bottom: 20px
+        
+
+    }
+    &__btn {
+        @extend %btn-blue;
+        max-width: 160px;
+        margin-bottom: 30px;
+        transition: all linear .3s;
+        &:hover {
+            color: $colorYellow;
+        }
+    }
+}
+.excursion-two{
+    background: url('../img/Rectangle\ slidtwo.jpg') center / cover no-repeat;
+    padding-top: 211px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.excursion-three{
+    background: url('../img/Rectangle\ slidthree.jpg') center / cover no-repeat;
+    padding-top: 211px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.excursion-four{
+    background: url('../img/Rectangle\ slidfour.jpg') center / cover no-repeat;
+    padding-top: 211px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+/*=ABOUT US==========================================================================*/
+
+.aboutUs{
+    @extend %page;
+    margin-bottom: 5rem;
+
+    &__content {
+        max-width: 1071px;
+        background: url('../img/Rectangle\ fonetwo.jpg') 0 0 /cover no-repeat;
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    .info {
+        max-width: 542px;
+        background: rgba(237, 237, 237, 1);
+        margin-top: 137px;
+        margin-bottom: 136px;
+        padding: 61px 75px 80px 85px;
+        border-radius: 10px;
+        margin-right: -210px;
+        
+        &__title {
+            color: $colorBlue;
+            font-size:24px;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+        }
+
+        &__text {
+            color: $colorBlack;
+            font-weight: 500;
+            font-size: 15px;
+            margin-bottom: 1.2rem
+        }
+    }
+}
+
+/*=TYPE EXCURSION==========================================================================*/
+
+.type-excursions {
+    @extend %container;
+    margin-bottom: 6rem;
+}
+
+.type {
+
+    &__title {
+        color: $colorBlue;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 4rem;
+    }
+
+    &__cards{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 3rem;
+    }
+
+    &__button{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     
+        .aboutText {
+            text-align: center;
+            max-width: 550px;
+            color: $colorBlack;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn{
+         @extend %btn-arrow;
+        }   
+    }
+}
+.card {
+    display: flex;
+    flex: 1 0 50%;
+    margin-bottom: 2.5rem;
+ 
+
+    
+
+    &__img {
+        padding-right: 1.2rem;
+    }
+}
+.titleCard{
+    color: $colorBlue;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+
+}
+.discriptionCard{
+    color: $colorBlack;
+    font-size: 14px;
+    line-height: 1.3;
+    font-weight: 500;
+    padding-right: 2rem
+    //max-width: 430px;
+
+}
+
+/*=GALLERY==========================================================================*/
+
+.gallery {
+    @extend %page;
+    margin-bottom: 5rem;
+    padding: 0 1rem;
+    &__title {
+        @extend %container;
+        margin-bottom: 4rem;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(11, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-gap: 10px;
+    }
+}
+.box {
+    min-height: 7rem;
+    border-radius: 5px;
+}
+.items1 {
+    grid-column-start: 1;
+    grid-column-end:5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background: url('../img/grid-one.jpg') center / cover;
+}
+.items2 {
+    grid-column-start:5;
+    grid-column-end:8;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    background: url('../img/grid-two.jpg') center / cover;
+}
+.items3 {
+    grid-column-start:8;
+    grid-column-end:10;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background: url('../img/grid-three.jpg') center / cover;
+}
+.items4 {
+    grid-column-start:10;
+    grid-column-end:12;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    background: url('../img/grid-four.jpg') center / cover;
+}
+.items5 {
+    grid-column-start:1;
+    grid-column-end:3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    background: url('../img/grid-five.jpg') center / cover;
+}
+.items6 {
+    grid-column-start:3;
+    grid-column-end:5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    background: url('../img/grid-six.jpg') center / cover;
+}
+.items7 {
+    grid-column-start:8;
+    grid-column-end:12;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    background: url('../img/grid-seven.jpg') center / cover;
+}
+.items8 {
+    grid-column-start:3;
+    grid-column-end:5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    background: url('../img/grid-eight.jpg') center / cover;
+}
+
+/*=REVIEWS==========================================================================*/
+
+.reviews {
+    @extend %page;
+    margin-bottom: 5rem;
+    &__title {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 0 25px;
+        margin-bottom: 4rem
+    }
+
+.content-swip {
+    @extend %section-content;
+    margin-left: auto;
+}    
+
+    .reviews-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding-bottom: 3rem;
+        overflow: hidden;
+        
+        .reviewsOne {
+            display: flex;
+            flex: 1 1 50%;
+            background: rgba(237, 237, 237, 1) url('../icons/comma.svg') bottom 25px right 20px no-repeat;
+            padding: 38px 30px 45px;
+            border-radius: 10px;
+            margin-left: 0.5rem;
+        }
+
+        .reviewsTwo {
+            display: flex;
+            flex: 1 1 50%;
+            background: rgba(237, 237, 237, 1);
+            padding: 38px 27px 45px;
+            border-radius: 10px;
+            margin-right: -250px;
+            margin-left: 0.5rem;
+        }
+    }
+}
+.reviews__foto { 
+    max-width: 245px;
+    margin-right: 28px;
+
+    img {
+        border-radius: 10px;
+    }
+} 
+.reviews__text {
+    h3 {
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    p {
+        max-width: 100%;
+        font-size: inherit;
+        font-weight: 500;
+    }
+ }  
+
+/*=FORM==========================================================================*/
+
+.questions {
+    @extend %page;
+    background: url('../img/Rectangle fonFooter.jpg') center / cover no-repeat;
+
+    &__content {
+        @extend %container; 
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 0;
+        
+    }
+}
+
+.form {
+    width: 560px;
+    padding-left: 105px;
+    padding-top: 132px;
+    padding-bottom: 143px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter:blur(10px);
+    backdrop-filter: rgba(0, 0, 0, 0.3) ;
+
+    &__title {
+        color: $colorWhite;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 6px;
+
+    }
+    &__subtitle {
+        color: $colorYellow;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 45px;
+
+    }
+    input {
+        width: 80%;
+        border-bottom: 1px solid $colorWhite;
+        margin-bottom: 45px;
+        color: $colorWhite ;
+
+        &::placeholder {
+            color: $colorWhite;
+            font-size: 12px
+        }
+    }
+    &__btn {
+        @extend %btn-blue;
+        max-width: 230px;
+
+    }
+
+}
+
+
+/*=FOOTER==========================================================================*/
+
+.footer {  
+    background: rgba(237, 237, 237, 1);
+    padding: 2rem 0;
+
+    &__content {
+        @extend %container;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+  
+    &__img {
+        margin-right: 110px;
+    }
+
+    &__webs {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .mail-activ {
+            display: none;
+        }
+    }
+    &__text li{
+        margin-bottom:8px;
+        a {
+            color: $colorBlack;
+            transition: all .5s;
+            
+            &:hover {
+                color: rgba(215, 174, 26, 1);
+            }
+        }
+    }
+    
+    &__cont {
+        li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            margin-right:5px;
+        }
+
+        a {
+            color: $colorBlack;
+        }
+
+    }
+    &__web {
+        margin-left: 115px;
+       .mail {
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.8rem;
+
+        img {
+            margin-right: 5px;
+        }
+
+        a {
+            color: $colorBlack;
+        }
+
+       }
+        .iconsWeb{
+            display: inline-flex;
+            align-items: center;
+            column-gap: 15px;
+        }
+
+    }
+}
+
+
+/*= LIST = EXCURSION ===================================================================================*/
+
+/*HEADER===============================================================================*/
+
+.headerExcursion {
+    background: url('../img/excursion/banner.jpg')center / cover no-repeat;
+    overflow: hidden;
+
+&__top {
+    @extend %container;
+}
+
+&__nav {
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+    margin-top: 26px;
+    margin-bottom: 60px;
+
+}
+
+&__title {
+    @extend %container;
+    h1 {
+        font-size: 72px;
+        font-weight: 700;
+        color: $colorWhite;
+        margin-top: 1rem;
+        margin-bottom: 80px;
+    }
+}
+
+}
+.nav-excursion {
+
+    &__logo {}
+    &__lists {
+        display: flex;
+        column-gap: 20px;
+        a {
+            color: $colorWhite;
+            transition: all linear .3s;
+            &:hover{
+                color: $colorYellow;
+            }
+        }
+    }
+    &__lists {}
+}
+
+/*PAGE===============================================================================*/
+
+.selectionTours {
+    @extend %container ;
+    margin-top: 40px;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 10px; 
+
+    &__form {
+        margin: 0 auto;
+        display: flex;
+        justify-content:space-between;
+        column-gap: 5px;
+        padding-bottom: 60px;
+        margin-bottom: 40px;
+
+        .input, .btn-submit { 
+            min-height: 50px;
+            width: 25%;
+            border-radius: 10px;
+            cursor: pointer;
+           
+            &::placeholder {
+                color: $colorBlack;
+            } 
+        }
+
+        .input {
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+            padding-left: 25px;
+            padding-right: 65px;
+        }
+        .btn-submit{
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            background: $colorBlueGrad;
+            font-size: 14px;
+            font-weight: 700;
+            color: $colorWhite;
+            line-height: 50px;
+            padding: 0 7.5%;
+            border-radius: 10px;    
+        }
+
+        .input-city {
+            background: url('../img/excursion/colation.svg') right 32px center no-repeat;
+            
+        }
+        .input-calendar{
+            background: url('../img/excursion/calendar.svg') right 32px center no-repeat;
+        }
+        .input-people {
+            background: url('../img/excursion/peple.svg') right 32px center no-repeat;
+        }
+    }
+}
+
+
+/*excursion-swiper===============================================================================*/
+.excursion-swiper{
+    width: 500px;
+    padding-bottom: 13px;
+    padding-top: 60px;
+    margin-bottom: 60px;
+ 
+}
+
+.prev {
+    display: none;
+}
+.next {
+    display: none;
+}
+.swiper-scrollbar-drag {
+    background: rgba(4, 153, 221, 1);
+}
+
+
+/*typeTours===============================================================================*/
+.typeTours {
+    display: flex;
+    justify-content:space-around;
+    cursor: pointer;
+   
+    span {
+        font-size: 14px;
+        font-weight: 500;
+        color: $colorBlack;
+        &:first-child {
+            color: $colorBlue;
+        }
+    } 
+}
+
+
+/*aboutTours===============================================================================*/
+
+.aboutTours {
+    @extend %container;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*filters===============================================================================*/
+
+.filters{
+    max-width: 30%;
+    padding: 0 35px ;
+    box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 10px; 
+
+    &__title {
+        font-size: 14px;
+        font-weight: 700;
+        color: $colorBlue;
+        margin: 20px 0 30px 0;
+    }
+}
+
+.filter {
+  
+    &__title {
+        font-size: 14px;
+        font-weight: 700;
+        color: $colorBlack;   
+    }
+
+    .minus {
+        background: url('../img/excursion/minus.svg') right center no-repeat;
+        cursor: pointer;
+        margin-bottom: 20px;
+       
+    }
+    .plus {
+        background: url('../img/excursion/plus.svg') right center  no-repeat;
+        cursor: pointer;
+    }
+
+/*price===============================================================================*/
+
+    &__price {
+        padding-bottom: 30px;
+        border-bottom:1px solid rgba(237, 237, 237, 1);
+
+        img {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    .boxPrice {
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+       
+    
+        input {
+            max-width: 47%;
+            border: 1px solid rgba(237, 237, 237, 1);
+            border-radius: 40px;
+            padding: 7px 0 7px 16px;
+    
+            &::placeholder {
+                color: $colorBlack;
+            }
+            
+        }
+      
+        
+       
+    }
+    
+/*amountPeople===============================================================================*/
+
+    &__amountPeople {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border-bottom:1px solid rgba(237, 237, 237, 1);
+    }
+
+    .amountPeople{
+
+        &__peple {
+            display: inline-block;
+            border: 1px solid rgba(237, 237, 237, 1);
+            color: $colorBlack;
+            padding: 5px 15px;
+            border-radius: 40px;
+            margin-bottom: 7px;
+            transition: all linear .2s;
+
+            &:hover {
+                background:$colorBlue;
+                color: $colorWhite;
+                
+            }
+
+            &:nth-child(6) {
+                background:$colorBlue;
+                color: $colorWhite;
+            }
+            &:nth-child(11) {
+                padding: 5px 11px;
+            }
+            &:last-child {
+                padding: 7px 15px;
+            }   
+        }
+    }
+
+/*place===============================================================================*/
+
+
+    &__place {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border-bottom:1px solid rgba(237, 237, 237, 1);
+    }
+    .radio-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        input {
+            margin-right: 10px;
+        }
+        label {
+            font-size: 12px;
+            font-weight: 500;
+            color: $colorBlack;
+            display: flex;
+            min-height: 1rem;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5px;
+        }
+    }
+
+
+
+ /*duration  ===============================================================================*/   
+
+    &__duration {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border-bottom:1px solid rgba(237, 237, 237, 1);
+    }
+    &__date {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border-bottom:1px solid rgba(237, 237, 237, 1);
+    }
+
+/*show  ===============================================================================*/   
+
+    &__show {
+        padding-top: 30px;
+        padding-bottom: 20px;
+       
+    }
+}
+
+.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    &__submit {
+        padding: 12px 80px;
+        background: $colorBlueGrad;
+        margin-bottom: 12px;
+        border-radius: 40px;
+        color: $colorWhite;
+        font-size: 14px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    &__reset {
+        background: url('../img/excursion/plusTwo.svg') no-repeat;
+        font-size: 12px;
+        font-weight: 500;
+        padding-left: 20px;
+        cursor: pointer;
+    }
+}
+
+.tours{
+    width: 70%;
+    padding: 10px 9px 0 40px;
+    position: relative;
+   
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        color: $colorBlue;
+        margin-bottom: 40px;
+        
+
+    }
+    &__card {
+        width: 100%;
+        box-shadow: 0 0 40px 0 rgba(97, 68, 68, 0.1);
+        border-radius: 10px; 
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+
+    }
+}
+
+.cards {
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    
+    &__text {
+        width: 100%;
+        padding-top: 27px;
+        padding-left: 43px;
+
+    }
+    &__subtitle {
+        font-size: 12px;
+        font-weight: 500;
+        color: $colorYellow;
+        margin-bottom: 2px;
+    }
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        color: $colorBlack;
+        margin-bottom: 20px;
+    }
+    &__price {
+        display: flex;
+        column-gap: 10px;
+        margin-bottom: 20px;
+    } 
+    &__discription {
+        font-size: 12px;
+        padding: 0 43px 20px 20px;
+        position: relative;
+
+        &::before {
+            content:'';
+            display: inline-block;
+            width: 3px;
+            height: 80%;
+            background: $colorBlue;
+            border-radius: 2px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        a {
+           @extend %btn-blue; 
+           margin-right: 10px;
+        } 
+    }
+}
+
+.old {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-rb {
+    padding-left: 1.5rem;
+    font-size: 18px;
+    font-weight: 700;
+    color: $colorBlue;
+    line-height: 1;
+    background: url('../img/excursion/price.svg') left -3px center no-repeat;
+    margin-bottom: 4px;
+}
+
+.young {
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    font-size: 10px;
+    color: $colorBlack;
+    line-height: 1;
+}
+
+.watches {
+    display: flex;
+    flex-direction: column;
+    padding-left:30px;
+    
+    .watch {
+        background: url('../img/excursion/bigtime.svg')left center no-repeat;
+        padding-left: 1.2rem;
+    }
+}
+
+.pages {
+   display: flex;
+   justify-content:center;
+   margin-top: 200px;
+   margin-bottom: 30px;
+
+    &__list {
+        margin-left: 500px;
+        position: relative;
+        width: 100px;
+        padding: 0 9px;
+        position: relative;
+        top: 0;
+        left: 0;
+
+        span {
+            font-size: 14px;
+        }
+
+        .active {
+            color: $colorBlue;
+            margin-right: 10px;
+        }
+
+        &::before {
+            content:'';
+            display: inline-block;
+            width: 5px;
+            height: 8px;
+            background: url('../img/excursion/Polygonone.svg') center no-repeat;
+            position: absolute;
+            top: 6px;
+            left: 0;
+            //padding-right: 6px;
+        }
+
+        &::after {
+            content:'';
+            display: inline-block;
+            width: 5px;
+            height: 8px;
+            background: url('../img/excursion/Polygontwo.svg') center no-repeat;
+            position: absolute;
+            top: 6px;
+            right: 0;
+           
+        }
+    }    
+}
+
+
+@media (max-width:1300px) {
+    .aboutUs .info {
+        margin-right: -100px;
+    }
+}
+
+@media (max-width:1200px) {
+   
+}
+
+@media (max-width:1180px) {
+    .aboutUs .info {
+        margin-right: -100px;
+    }
+    .aboutUs .aboutUs__content {
+        max-width: 900px;
+    }
+}
+
+@media (max-width:1122px) {
+    .filter .amountPeople__peple{
+        padding: 5 25px;
+    }
+}
+
+@media (max-width:1050px) {
+    .reviews .reviews-row .reviewsTwo {
+        margin-right: -450px;
+    }
+   
+
+
+}
+
+@media (max-width:992px) {
+    .excursion {
+        width: 35%;
+        &:last-child {
+            margin-right:-250px ;  
+        }
+    } 
+    .aboutUs .info {
+        margin-right: -150px;
+    }
+    .aboutUs .aboutUs__content {
+        max-width: 600px;
+    }
+    .cards__text {
+        padding-left: 20px;
+    }
+    .watches {
+        padding-left: 5px;
+    }
+    .title-rb {
+        font-size: 14px;
+        line-height: 1.2;
+    }
+    .cards__text {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width:870px) {
+
+    .footer__img {
+        margin-right: 50px;
+    }
+    .footer__web {
+        margin-left: 50px;
+    }
+    .tours {
+        padding-left: 20px;
+    }
+    .title-rb {
+        font-size: 10px;
+        line-height: 2;
+    }
+    .cards__price {
+        column-gap: 5px;
+    }
+}
+
+@media (max-width: 815px) {
+    .filter__title {
+        font-size: 12px;
+    }
+    .cards__btn a {
+        padding: 1rem 2rem;
+    }
+
+}
+
+@media (max-width: 795px) {
+
+
+/*==HEADER BANNER====================================================*/
+
+    .text .text__subtitle {
+        font-size: 58px;
+        span {
+            bottom: -1.5rem;
+            left:17rem;
+            font-size: 36px;
+        }
+    }
+   
+
+    
+    .amountPeople__peple {
+            font-size: 10px;
+        }
+    
+}
+
+@media (max-width: 768px) {
+
+/*==BURGER====================================================*/
+    .burger {
+      display: block;
+    }
+  
+    .burger.active .burg:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .burger.active .burg:nth-child(1) {
+      transform: translateY(10px) rotate(40deg);
+    }
+  
+    .burger.active .burg:nth-child(3) {
+      transform: translateY(-10px) rotate(-40deg);
+    }
+    .nav-lists {
+        position: absolute;
+        left: 0;
+        top: -100px;
+        gap: 0;
+        
+        flex-direction: column;
+        width: 100%;
+        
+        text-align: center;
+        transition: .5s;
+    }
+    .nav-lists.active {
+        top: 20px;
+    }
+
+/*======================================================*/
+
+    .reviews .reviews-row .reviewsTwo {
+        margin-right: -550px;
+    }
+
+    .video {
+        margin-left: 0.5rem;
+    }
+
+/*=EXCURSION SWIPER=====================================================*/
+    .excursions-box {
+        margin-bottom: 50px;
+    }
+    .excursion {
+        width: 50%;
+        &:last-child {
+            margin-right: -450px;  
+        }
+    }    
+    .excursion-three {
+        margin-right: -200px;
+    } 
+    .aboutUs .aboutUs__content {
+        max-width: 500px;
+        max-height: 700px;
+    }
+    .aboutUs .info {
+        max-width: 480px;
+        padding: 50px;
+        margin-right: -150px;
+            &__title {
+                margin-bottom: 1.5rem;
+            }
+            &__text {
+                margin-bottom: 1rem
+            }
+        
+    }
+
+    .type .type__cards {
+        display: block;
+        margin-bottom: 4rem;
+    }
+    .form {
+        width: 400px;
+    }
+
+/*GALLERY=====================================================*/
+
+
+.box {
+    min-height: 15rem;
+}
+.items1 {
+    display: none;
+}
+.items2 {
+    grid-column-start:1;
+    grid-column-end:5;
+}
+.items3 {
+    grid-column-start:5;
+    grid-column-end:9;
+}
+.items4 {
+    grid-column-start:9;
+    grid-column-end:12;
+
+}
+.items5 {
+    display: none;
+}
+.items6 {
+    display: none;
+}
+.items7 {
+    grid-column-start:5;
+    grid-column-end:12;
+}
+.items8 {
+    display: none;
+}
+.questions__content {
+    padding-right: 80px;
+}
+
+.footer__img {
+    margin-right: 20px;
+}
+.footer__web {
+    margin-left: 20px;
+}
+
+.excursion-swiper {
+    width: 400px;
+}
+.typeTours span {
+    font-size: 12px;
+}
+.selectionTours__form {
+    flex-wrap:wrap;
+    justify-content: center;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    padding: 0 50px;
+}
+.selectionTours__form .input, .btn-submit {
+    width: 40%;
+    
+}
+.selectionTours__form .btn-submit {
+width: 40%;
+}
+
+.aboutTours {
+    flex-wrap: wrap-reverse;
+}
+.tours {
+    width: 100%;
+    margin-bottom: 90px;
+}
+.filters {
+    min-width: 100%;
+    margin-top: 150px;
+}
+.filter {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.filter > div {
+    width: 35%;
+}
+.filter__amountPeople {
+    padding-top: 0;
+    text-align: center;
+}
+.filter__title {
+    text-align: start;
+}
+.pages {
+    margin-top: 50px;
+}
+.pages__list {
+    top: -800px;
+    margin: 0 auto;  
+}
+
+}
+
+@media (max-width: 690px) {
+   
+
+}
+
+@media (max-width: 670px) {
+    .footer__img {
+        margin-bottom: 1rem;
+    }
+    .footer__content {
+        position: relative;
+        display: block;
+        text-align: center;
+    }
+    .footer__webs {
+        margin-top: 4.5rem;
+        justify-content: space-evenly;
+    }
+    .footer__text {
+        text-align: start;
+    }
+    .footer__cont {
+        text-align: start;
+    }
+    .footer__webs .mail-activ {
+        display: inline-block;
+    }
+
+    .footer__web .mail {
+        display: none;
+      
+    }
+    .iconsWeb {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translateX(-60%);
+    }
+
+
+}
+
+@media (max-width: 650px) {
+    .aboutUs .info {
+        margin-right: -50px;
+    }
+    .selectionTours__form .input {
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 631px) {
+    .pages__list {
+        top: -850px;
+    }
+}
+
+@media (max-width: 576px) {
+    .reviews .reviews-row .reviewsOne {
+        flex: 0 1 70%;
+        display: block;
+    }
+    .reviews .reviews-row .reviewsOne .reviews__foto img{
+        width: 35%;
+    }
+    
+    .reviews .reviews-row .reviewsTwo {
+        display: block;
+    }
+    .reviews .reviews-row .reviewsTwo .reviews__foto img{
+        width: 35%;
+    }
+  
+/*==HEADER BANNER====================================================*/
+
+    .text .text__title {
+        font-size: 72px;
+    }
+    .text .text__subtitle {
+          font-size: 48px;
+    }
+    .text .text__subtitle span {
+          
+            bottom: -1.5rem;
+            left:14.5rem;
+            font-size: 36px;
+        }
+    .page {
+        padding: 10rem 0 0 0;
+    }
+    .aboutUs .aboutUs__content {
+        max-width: 300px;
+    }
+    .aboutUs .info {
+        max-width: 350px;
+        margin-right: -200px;
+        padding: 30px;
+    }
+
+    .typeTours span {
+        font-size: 10px;
+    }
+
+    .selectionTours__form .input, .btn-submit {
+        width: 100%;
+    }
+    .selectionTours__form .btn-submit {
+        width: 100%;
+    }
+    .cards__price {
+        display: block;
+    }
+    .cards__price > div {
+        margin-bottom:5px;
+    }
+    .watches {
+        padding: 0;
+    }
+}  
+
+@media (max-width: 554px) {
+    .tours__card {
+        display: block;
+
+    }
+  
+    .cards__image {
+        border: 1px solid black;
+        width: 100%;
+        max-height: 240px;
+        object-fit: cover;
+        object-position: center;
+    }
+    .cards__price {
+        display: flex;
+    }
+    .cards__price > div {
+        margin-right: 1rem;
+    }
+    .cards__btn a {
+        padding: 0.5rem 1.5rem;
+    }
+    .title-rb {
+        font-size: 14px;
+    }
+    .watches .watch {
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 525px) {
+    .text .text__subtitle span {
+        left:11rem;
+    }
+    .filter > div {
+        width: 100%;
+        padding: 50px;
+    }
+    .pages__list {
+        top: -1350px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 510px) {
+    .reviews .reviews-row {
+        display: block;
+    }
+    .reviews .reviews-row .reviewsOne {
+      margin-bottom: 1rem;
+    }
+    .aboutUs .info {
+        max-width: 350px;
+        margin-right: -100px;
+        padding: 30px;
+    }
+
+    .questions {
+        background: url('../img/fonFooterTwo.jpg')center / cover no-repeat;
+    }
+    .questions__content {
+        padding: 3rem 1rem 20rem;
+        justify-content: center;
+    }
+    .form {
+        padding-left:25px ;
+    }
+}
+
+@media (max-width: 495px) {
+
+
+    .header .header__top {
+        margin-bottom: 4rem;
+    }
+    .header .header__body {
+        display: block;
+    }
+
+    /*==HEADER BANNER====================================================*/
+
+    .text .text__subtitle {
+        margin-bottom: 1rem;
+        font-size: 38px;
+        span {
+            left:0;
+            font-size: 26px;
+        }
+    }
+    .header__footer {
+        margin-top: -160px;
+
+    }
+    /*=EXCURSION SWIPER=====================================================*/
+ 
+    .excursions-box {
+        margin-bottom: 50px;
+    }
+    .excursions-row {
+        display: block;
+    }
+    .excursion {
+        width: 100%;
+        height: 50%;
+        margin-bottom: 1rem;
+    }    
+
+    /*GALLERY=====================================================*/
+      .gallery__grid {
+        grid-template-rows: repeat(6, 1fr);
+    }
+    .box {
+        min-height: 10rem;
+    }
+    .items1 {
+        display: grid;
+        grid-column-start:1;
+        grid-column-end:12;
+        grid-row-start:5 ;
+        grid-row-end: 7;
+    }
+
+    .items2 {
+        grid-column-start:1;
+        grid-column-end:6;
+        grid-row-end: 5;
+
+    }
+    .items3 {
+        grid-column-start:6;
+        grid-column-end:12;
+        grid-row-start:1 ;
+        grid-row-end: 3;
+
+    }
+    .items7 {
+        grid-column-start:6;
+        grid-column-end:12;
+        grid-row-start:3 ;
+        grid-row-end: 5;
+    
+    }
+    .items4 {
+        display: none;
+        grid-column-start:1;
+        grid-column-end:12;
+        grid-row-start:5 ;
+        grid-row-end: 7;
+    }
+    .headerExcursion__title h1 {
+        font-size: 62px;
+    }
+}
+
+@media (max-width: 410px) {
+    .aboutUs .aboutUs__content {
+        max-width: 100%;
+    }
+    .aboutUs .info {
+        margin: 50px;
+    }
+    .footer__webs {
+        justify-content: space-between;
+        flex-direction: column; 
+    }
+    .footer__text {
+        margin-bottom: 1rem;
+    }
+    .iconsWeb {
+        top: 35%;
+    }
+    .headerExcursion__title h1 {
+        font-size: 42px;
+    }
+    .title-rb {
+        font-size: 10px;
+    }
+    .cards__price > div {
+        margin-right: 0;
+    }
+    .filter > div {
+        width: 90%;
+        padding: 10px 10px 30px 10px;
+    }
+    .pages__list {
+        top: -1000px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 317px) {
+    .cards__price {
+        display: block;
+    }
+    .pages__list {
+        top: -1100px;
+        margin: 0 auto;
+    }
+}
